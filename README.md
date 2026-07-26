@@ -1,5 +1,5 @@
 # Weather-Trends-Analyzer
-A scalable data processing pipeline built in Python that automates weather data ingestion, leverages Dask for parallel computing, and delivers comprehensive trend analysis and visualizations.
+A scalable data processing pipeline built in Python that automates weather data ingestion from Open-Meteo, leverages Dask for parallel computing, and delivers comprehensive trend analysis and visualizations. 
 
 ## Features
 * **Interactive Frontend:** Simple, clean user interface centered around weather analytics.
@@ -32,5 +32,11 @@ Weather-Trends-Analyzer/
 │
 └── app.py
 ```
+## Prerequisites
+
+Ensure you have the following installed:
+* **Python 3.10+**
+* **pip** (Python package installer)
+
 ## Run the Application
 * uvicorn app:app --reload
