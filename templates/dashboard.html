@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🌡️ Results for {{ city }}, {{ country }}</h1>
+    </div>
+
+    <div class="dashboard-container">
+    <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">Average Temp</span>
+                <span class="stat-value">{{ stats.mean_temp | round(1) }}°C</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Peak Temp</span>
+                <span class="stat-value">{{ stats.max_temp | round(1) }}°C</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Lowest Temp</span>
+                <span class="stat-value">{{ stats.min_temp | round(1) }}°C</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Total Precipitation</span>
+                <span class="stat-value">{{ stats.precipitation | round(1) }} mm</span>
+            </div>
+    </div>
+        <div class="chart-card">
+            <img id="chart-img" src="{{ url_for('static', path=chart_path.replace('static/', '')) }}" alt="Weather Chart">
+        </div>
+
+        <div class="action-footer">
+            <a href="/" class="btn-back">Analyze Another City</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather-Trends-Analyzer</title>
+     <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="header">
+         <h1>🌤️Weather Trends Analyzer</h1>
+    </div>
+
+    <div class="container">
+    <form action="/analyze" method="POST">
+        <div class="form">
+        <label for="city">City Name:</label>
+        <input type="text" id="city" name="city"  required placeholder="e.g. Cairo">
+        </div>
+
+        <div class="form">
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start_date" max="{{ today }}" required>
+        </div>
+
+        <div class="form">
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end_date" max="{{ today }}" required>
+        </div>
+
+        <button id="submit">View Dashboard</button>
+    </form>
+    </div>
+</body>
+</html>
