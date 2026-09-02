@@ -1,4 +1,4 @@
-#🌦️ Weather-Trends-Analyzer
+# 🌦️ Weather-Trends-Analyzer
 A scalable data processing pipeline built in Python that automates weather data ingestion from Open-Meteo, leverages Dask for parallel computing, and delivers comprehensive trend analysis and visualizations. 
 
 ---
